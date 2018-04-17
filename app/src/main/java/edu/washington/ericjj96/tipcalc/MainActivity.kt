@@ -49,7 +49,24 @@ class MainActivity : AppCompatActivity() {
                 if (tipButton.isEnabled) {
                     tipButton.setOnClickListener {
                         var currentAmount: Double = s.toString().replace("$", "").toDouble()
-                        var tip = currentAmount * 0.15
+                        var value = tipSpinner.getSelectedItem().toString()
+                        var tipPercent = 0.15
+                        when (value) {
+                            "10%" -> {
+                                tipPercent = 0.10
+                            }
+                            "15%" -> {
+                                tipPercent = 0.15
+                            }
+                            "18%" -> {
+                                tipPercent = 0.18
+                            }
+                            "20%" -> {
+                                tipPercent = 0.20
+                            }
+
+                        }
+                        var tip = currentAmount * tipPercent
                         Toast.makeText(this@MainActivity, "$" + "%.2f".format(tip), Toast.LENGTH_LONG).show()
                     }
                 }

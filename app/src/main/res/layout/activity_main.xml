@@ -65,4 +65,11 @@
         app:layout_constraintVertical_bias="0.059"
         tools:text="Amount" />
 
+    <Spinner
+        android:id="@+id/tipSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="31dp"
+        android:entries="@array/tip_array" />
+        tools:layout_editor_absoluteY="5dp" />
+
 </android.support.constraint.ConstraintLayout>
