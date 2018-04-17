@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }
-                tipButton.isEnabled = !s.isEmpty()
+                tipButton.isEnabled = s.toString().length > 1
                 amount.setSelection(amount.text.length)
                 if (tipButton.isEnabled) {
                     tipButton.setOnClickListener {
